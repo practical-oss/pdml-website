@@ -55,7 +55,7 @@
     ]
 
     [note
-        A PDML parser does not generate an error or warning if a map contains duplicate keys (see [link (url="^[get core_spec_url]#duplicate_tags") Duplicate Tags] for more information).
+        A PDML parser does not generate an error or warning if a map contains duplicate keys (see [link (url="^[ins_const core_spec_url]#duplicate_tags") Duplicate Tags] for more information).
         Thus, no error/warning is generated when the following code is parsed — the error is (typically) reported later when the parsed AST is converted into a native map.
         [scode
             """

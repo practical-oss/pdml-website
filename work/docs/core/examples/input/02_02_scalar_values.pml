@@ -37,6 +37,6 @@
         All scalar values are encoded as plain text, using their string representation.
         
         Support for converting scalar values encoded as strings into native types (e.g. [c int32]) may be provided in a PDML implementation.
-        For example, the [link (url="https://github.com/pdml-lang/full-pdml-impl") PDML reference implementation] provides convenience methods for converting PDML AST nodes into commonly used native types.
+        For example, the [link (url="https://github.com/practical-oss/pdml-full-impl") PDML reference implementation] provides convenience methods for converting PDML AST nodes into commonly used native types.
     ]
 ]

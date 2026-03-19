@@ -33,11 +33,17 @@
                         <tr>
                             <td>PDML_document</td>
                             <td>=</td>
-                            <td>tagged_node</td>
+                            <td>whitespace_char * tagged_node whitespace_char *</td>
                             <td>[root<br />&nbsp;&nbsp;[child text]<br />]<br /><a href="../examples/index.html">more examples</a></td>
                         </tr>
                         
-
+                        <tr>
+                            <td>whitespace_char</td>
+                            <td>=</td>
+                            <td>&nbsp;&nbsp;' '<br />| '\t'<br />| '\n'<br />| '\r'<br />| '\f'</td>
+                            <td></td>
+                        </tr>
+                        
                         <tr>
                             <td>tagged_node</td>
                             <td>=</td>
@@ -73,8 +79,8 @@
                             <br />&nbsp;&nbsp;\ [ ]
                             <br />&nbsp;&nbsp;{space} {tab} {new line} {carriage return}
                             <br />&nbsp;&nbsp;^ ( ) = " ~ | : , ` ! $
-                            <br />&nbsp;&nbsp;U+0000 to U+001F (included)
-                            <br />&nbsp;&nbsp;U+0080 to U+009F (included)<br /><br />
+                            <br />&nbsp;&nbsp;U+0000 to U+0008, U+000B, U+000E to U+001F (C0 controls)
+                            <br />&nbsp;&nbsp;U+0080 to U+009F (C1 controls)<br /><br />
                             | \\<br />| \[<br />| \]<br /><br />
                             | \s<br />| \t<br />| \n<br />| \r<br /><br />
                             <!--
@@ -87,7 +93,7 @@
                         <tr>
                             <td>separator</td>
                             <td>=</td>
-                            <td>&nbsp;&nbsp;" "<br />| "\t"<br />| "\n"<br />| "\r\n"</td>
+                            <td>&nbsp;&nbsp;' '<br />| '\t'<br />| '\n'<br />| "\r\n"</td>
                             <td></td>
                         </tr>
 
@@ -110,8 +116,8 @@
                             <td>=</td>
                             <td>&nbsp;&nbsp;any Unicode code point, except<br />
                             &nbsp;&nbsp;\ [ ]
-                            <br />&nbsp;&nbsp;U+0000 to U+001F (included)
-                            <br />&nbsp;&nbsp;U+0080 to U+009F (included)<br /><br />
+                            <br />&nbsp;&nbsp;U+0000 to U+0008, U+000B, U+000E to U+001F (C0 controls)
+                            <br />&nbsp;&nbsp;U+0080 to U+009F (C1 controls)<br /><br />
                             <!--
                             | "\\"<br />| "\["<br />| "\]"<br /><br />
                             | "\t"<br />| "\n"<br />| "\r"</td>

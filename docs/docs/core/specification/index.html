@@ -1153,7 +1153,7 @@ green]</code></pre>
 
 
 </code></pre>
-                            <p class="pml-paragraph">Whitespace within PDML documents (i.e. the text contained between the opening and closing delimiters of the root node) must be preserved by parsers.</p>
+                            <p class="pml-paragraph">Whitespace in text leaves must be preserved by parsers.</p>
                             <p class="pml-paragraph">Consider the following PDML snippet:</p>
                             <pre class="pml-code"><code>[a  foo   [b]
     2 [c] [d]
@@ -1603,7 +1603,7 @@ green]</code></pre>
 
                                     </li>
                                     <li class="pml-list-element">
-                                        <p class="pml-paragraph">Section <a class="pml-xref" href="#whitespace">Whitespace Rules</a> states: &quot;Parsers must preserve whitespace in PDML documents.&quot;</p>
+                                        <p class="pml-paragraph">Section <a class="pml-xref" href="#whitespace">Whitespace Rules</a> states: &quot;Whitespace in text leaves must be preserved by parsers.&quot;</p>
                                         <p class="pml-paragraph">This rule is justified because PDML is a <i class="pml-italic">general purpose and portable</i> text format. Any attempt to define <i class="pml-italic">standard</i> whitespace-handling rules would fail: the rules would be &quot;just what we need&quot; in some contexts, but &quot;totally unsuited&quot; in others.</p>
 
                                     </li>
@@ -1622,7 +1622,7 @@ green]</code></pre>
 
                                     </div>
                                     <div class="pml-admonition-content">
-                                        <p class="pml-paragraph">Whenever PDML documents are read and written only by machines, the compact form is usually preferable because it leads to better time- and space-efficiency.</p>
+                                        <p class="pml-paragraph">Whenever PDML documents are read and written only by machines, the compact form is usually preferable because it improves time- and space-efficiency.</p>
                                     </div>
                                 </div>
                                 <p class="pml-paragraph">Although the compact form is short and efficient, it can be difficult to read for humans (especially in the case of large, deeply nested trees). We can easily enhance readability and maintainability by indenting child nodes and treating the additional whitespace as insignificant:</p>
@@ -1944,7 +1944,7 @@ line 2</code></pre>
                             <h3 class="pml-chapter-title">Revision History</h3>
                             <ul class="pml-list">
                                 <li class="pml-list-element">
-                                    <p class="pml-paragraph">2025-xx-xx: version 2.0.0</p>
+                                    <p class="pml-paragraph">2025-03-25: version 2.0.0</p>
 
                                 </li>
                                 <li class="pml-list-element">

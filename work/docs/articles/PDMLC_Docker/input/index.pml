@@ -34,13 +34,13 @@
                     """
                     FROM openjdk:17-alpine
 
-                    ARG PDML_VERSION=0.79.0
+                    ARG PDML_VERSION=0.80.0
 
                     WORKDIR /app
 
                     # Install PDMLC
                     RUN apk update && apk add --no-cache curl
-                    RUN curl -O https://github.com/pdml-lang/full-pdml-impl/releases/download/v${PDML_VERSION}/pdmlc-java-app-${PDML_VERSION}.tar
+                    RUN curl -O https://github.com/practical-oss/pdml-full-impl/releases/download/v${PDML_VERSION}/pdmlc-java-app-${PDML_VERSION}.tar
                     RUN tar -xf pdmlc-java-app-${PDML_VERSION}.tar
 
                     ENV PATH="/app/pdmlc-java-app-${PDML_VERSION}/bin:${PATH}"

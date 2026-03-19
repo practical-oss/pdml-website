@@ -1,12 +1,12 @@
 # PDML Website
 
-Directory `docs` contains the target files used by the web server.
+Directory `docs` contains the web server files.
 
 ## Links
 
 - [Website](https://www.pdml-lang.dev/)
 
-- [Discussions](https://github.com/pdml-lang/pdml-lang.github.io/discussions)
+- [Discussions](https://github.com/practical-oss/pdml-website/discussions)
 
-- [Issues](https://github.com/pdml-lang/pdml-lang.github.io/issues)
+- [Issues](https://github.com/practical-oss/pdml-website/issues)
 
