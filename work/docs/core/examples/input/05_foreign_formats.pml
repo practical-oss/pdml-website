@@ -1,6 +1,6 @@
-[ch (id=foreign_formats) [title Embedding Foreign Data/Markup Encodings]
+[ch (id=foreign-formats) [title Embedding Foreign Data/Markup Encodings]
 
-    Since a PDML node can contain [i any] text (except Unicode control characters listed in [link (url="^[ins_const core_spec_url]#invalid_characters") Invalid Characters]), you can embed data and markup encoded in foreign formats such as XML, JSON, and HTML:
+    Since a PDML node can contain [i any] text (except Unicode control characters listed in [link (url="^[ins-const core_spec_url]#invalid_characters") Invalid Characters]), you can embed data and markup encoded in foreign formats such as XML, JSON, and HTML:
     [code
         """
         [foreign_formats_examples
@@ -31,7 +31,7 @@
     [note
         Frequent use of escape sequences increases error-proneness while reducing readability and writability.
 
-        To address this issue, the [link (url="^[ins_const extensions_url]#string_literals") String Literals] PDML extension (not part of Core PDML) provides alternative ways to encode text, eliminating the need for excessive escape sequences.
+        To address this issue, the [link (url="^[ins-const extensions_url]#string_literals") String Literals] PDML extension (not part of Core PDML) provides alternative ways to encode text, eliminating the need for excessive escape sequences.
         For example, a quoted string literal allows you to rewrite the above code as follows:
         [code
             """

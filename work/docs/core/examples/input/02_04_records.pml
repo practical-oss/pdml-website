@@ -36,5 +36,5 @@
         [config [color green][dimensions [width 162][height 100]][remark]]
         """
     ]
-    For more information about indentation and other forms of insignificant whitespace you may read [link (url="^[ins_const core_spec_url]#whitespace_tips") How to Handle Whitespace].
+    For more information about indentation and other forms of insignificant whitespace you may read [link (url="^[ins-const core_spec_url]#whitespace_tips") How to Handle Whitespace].
 ]

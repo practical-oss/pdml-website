@@ -1,4 +1,4 @@
-[ch (id=data_and_markup) [title Data and Markup]
+[ch (id=data-and-markup) [title Data and Markup]
 
     Data and markup can be mixed in a single PDML document.
 

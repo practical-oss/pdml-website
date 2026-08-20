@@ -44,14 +44,15 @@
                                     </details>
                                 </li>
                                 <li class="pml-toc-leaf-node"><a href="#markup">Markup</a></li>
-                                <li class="pml-toc-leaf-node"><a href="#data_and_markup">Data and Markup</a></li>
-                                <li class="pml-toc-leaf-node"><a href="#foreign_formats">Embedding Foreign Data/Markup Encodings</a></li>
+                                <li class="pml-toc-leaf-node"><a href="#data-and-markup">Data and Markup</a></li>
+                                <li class="pml-toc-leaf-node"><a href="#foreign-formats">Embedding Foreign Data/Markup Encodings</a></li>
                             </ul>
                         </div>
                     </nav>
                 </aside>
                 <article id="doc__" class="pml-doc-text">
                     <h1 class="pml-doc-title">Core PDML Examples</h1>
+                    <p class="pml-paragraph"> </p>
                     <table class="pml-table">
                         <tr class="pml-table-body-row">
                             <td class="pml-table-body-cell">
@@ -90,7 +91,7 @@
                     </table>
                     <section id="intro" class="pml-chapter">
                         <h2 class="pml-chapter-title">Introduction</h2>
-                        <p class="pml-paragraph">This document shows examples of encoding commonly used data structures and markup using <i class="pml-italic">only Core PDML</i>. <a class="pml-link" href="../../extensions/user_manual/index.html">PDML extensions</a> (optional features, not part of Core PDML) will not be used in the examples below, but mentioned occasionally to explain when and why they are useful.</p>
+                        <p class="pml-paragraph">This document shows examples of encoding commonly used data structures and markup using <i class="pml-italic">only Core PDML</i>. <a class="pml-link" href="../../extensions/user-manual/index.html">PDML extensions</a> (optional features, not part of Core PDML) will not be used in the examples below, but mentioned occasionally to explain when and why they are useful.</p>
                         <p class="pml-paragraph">The aim is to <i class="pml-italic">show examples</i> without digging into details — this is not a comprehensive Core PDML tutorial.</p>
                         <div class="pml-admonition">
                             <div class="pml-admonition-label">
@@ -233,7 +234,7 @@
                                     <div class="pml-admonition-content">
                                         <p class="pml-paragraph">If each element in a list is a scalar value then you can also encode the list as a text node with elements separated by commas:</p>
                                         <pre class="pml-code"><code>[names Tim, Tom, Tam]</code></pre>
-                                        <p class="pml-paragraph">However, if the elements themselves contain spaces, commas, and/or other special characters, then it might be required to use <a class="pml-link" href="../../extensions/user_manual/index.html#string_literals">String Literals</a> (a PDML extension not covered here), e.g.:</p>
+                                        <p class="pml-paragraph">However, if the elements themselves contain spaces, commas, and/or other special characters, then it might be required to use <a class="pml-link" href="../../extensions/user-manual/index.html#string_literals">String Literals</a> (a PDML extension not covered here), e.g.:</p>
                                         <pre class="pml-code"><code>[friends &quot;Tim and Tom&quot;, &quot;Tam, Tum&quot;]</code></pre>
                                         <p class="pml-paragraph">The idiomatic way to encode lists (using only Core PDML) is to use a separate node for each element, as shown in this section.</p>
                                     </div>
@@ -490,7 +491,7 @@
                         </div>
 
                     </section>
-                    <section id="data_and_markup" class="pml-chapter">
+                    <section id="data-and-markup" class="pml-chapter">
                         <h2 class="pml-chapter-title">Data and Markup</h2>
                         <p class="pml-paragraph">Data and markup can be mixed in a single PDML document.</p>
                         <p class="pml-paragraph">The following code shows a record tagged <code class="pml-inline-code">product</code>. Look at field <code class="pml-inline-code">description</code>. It contains PML markup embedded in a PDML data document:</p>
@@ -596,7 +597,7 @@
                         </ul>
 
                     </section>
-                    <section id="foreign_formats" class="pml-chapter">
+                    <section id="foreign-formats" class="pml-chapter">
                         <h2 class="pml-chapter-title">Embedding Foreign Data/Markup Encodings</h2>
                         <p class="pml-paragraph">Since a PDML node can contain <i class="pml-italic">any</i> text (except Unicode control characters listed in <a class="pml-link" href="../../core/specification/index.html#invalid_characters">Invalid Characters</a>), you can embed data and markup encoded in foreign formats such as XML, JSON, and HTML:</p>
                         <pre class="pml-code"><code>[foreign_formats_examples
@@ -623,7 +624,7 @@
                             </div>
                             <div class="pml-admonition-content">
                                 <p class="pml-paragraph">Frequent use of escape sequences increases error-proneness while reducing readability and writability.</p>
-                                <p class="pml-paragraph">To address this issue, the <a class="pml-link" href="../../extensions/user_manual/index.html#string_literals">String Literals</a> PDML extension (not part of Core PDML) provides alternative ways to encode text, eliminating the need for excessive escape sequences. For example, a quoted string literal allows you to rewrite the above code as follows:</p>
+                                <p class="pml-paragraph">To address this issue, the <a class="pml-link" href="../../extensions/user-manual/index.html#string_literals">String Literals</a> PDML extension (not part of Core PDML) provides alternative ways to encode text, eliminating the need for excessive escape sequences. For example, a quoted string literal allows you to rewrite the above code as follows:</p>
                                 <pre class="pml-code"><code>[markup_text ^&quot;[p Have a [i great] day.]&quot;]</code></pre>
                             </div>
                         </div>

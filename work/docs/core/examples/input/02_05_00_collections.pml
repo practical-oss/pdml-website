@@ -1,7 +1,7 @@
 [ch (id=collections) [title Collections]
 
-    ^[ins_file 02_05_01_lists.pml]
-    ^[ins_file 02_05_02_maps.pml]
-    ^[ins_file 02_05_03_tables.pml]
-    ^[ins_file 02_05_04_databases.pml]
+    ^[ins-file 02_05_01_lists.pml]
+    ^[ins-file 02_05_02_maps.pml]
+    ^[ins-file 02_05_03_tables.pml]
+    ^[ins-file 02_05_04_databases.pml]
 ]

@@ -22,16 +22,16 @@
                                 <li class="pml-toc-leaf-node"><a href="#introduction">Introduction</a></li>
                                 <li class="pml-toc-leaf-node"><a href="#what">What Is PDML?</a></li>
                                 <li class="pml-toc-leaf-node"><a href="#website">What Can I Find on This Website?</a></li>
-                                <li class="pml-toc-leaf-node"><a href="#core_vs_extensions">What Is &quot;Core PDML&quot; and What Are &quot;PDML Extensions&quot;?</a></li>
-                                <li class="pml-toc-leaf-node"><a href="#addon_examples">Can You Tell Me More About Extensions?</a></li>
+                                <li class="pml-toc-leaf-node"><a href="#core-vs-extensions">What Is &quot;Core PDML&quot; and What Are &quot;PDML Extensions&quot;?</a></li>
+                                <li class="pml-toc-leaf-node"><a href="#addon-examples">Can You Tell Me More About Extensions?</a></li>
                                 <li class="pml-toc-branch-node">
                                     <details>
-                                        <summary><a href="#what_for">What Can I Do With PDML?</a></summary>
+                                        <summary><a href="#what-for">What Can I Do With PDML?</a></summary>
                                         <ul>
-                                            <li class="pml-toc-leaf-node"><a href="#data_storage">Human-Friendly Data Storage and Delivery</a></li>
-                                            <li class="pml-toc-leaf-node"><a href="#pdml_companion">PDML Companion</a></li>
-                                            <li class="pml-toc-leaf-node"><a href="#java_library">Java Library</a></li>
-                                            <li class="pml-toc-leaf-node"><a href="#create_your_own">Create Your Own Implementation</a></li>
+                                            <li class="pml-toc-leaf-node"><a href="#data-storage">Human-Friendly Data Storage and Delivery</a></li>
+                                            <li class="pml-toc-leaf-node"><a href="#pdml-companion">PDML Companion</a></li>
+                                            <li class="pml-toc-leaf-node"><a href="#java-library">Java Library</a></li>
+                                            <li class="pml-toc-leaf-node"><a href="#create-your-own">Create Your Own Implementation</a></li>
                                         </ul>
                                     </details>
                                 </li>
@@ -48,6 +48,7 @@
                 </aside>
                 <article id="doc__" class="pml-doc-text">
                     <h1 class="pml-doc-title">PDML Overview</h1>
+                    <p class="pml-paragraph">   </p>
                     <table class="pml-table">
                         <tr class="pml-table-body-row">
                             <td class="pml-table-body-cell">
@@ -185,20 +186,20 @@
                         </ul>
 
                     </section>
-                    <section id="core_vs_extensions" class="pml-chapter">
+                    <section id="core-vs-extensions" class="pml-chapter">
                         <h2 class="pml-chapter-title">What Is &quot;Core PDML&quot; and What Are &quot;PDML Extensions&quot;?</h2>
                         <p class="pml-paragraph">The <a class="pml-link" href="../../docs/core/specification/index.html">Core PDML Specification</a> encompasses the fundamental set of simple rules needed for encoding data and markup of any complexity as plain text. This is the minimum set of rules that every PDML implementation must adhere to.</p>
-                        <p class="pml-paragraph"><a class="pml-link" href="../../docs/extensions/user_manual/index.html">PDML Extensions</a> encompass additional rules that specify a set of predefined, but optional features (called extensions) designed to enrich the core functionality and increase practicality in specific contexts. A PDML implementation can support some or all extensions, but every extension must be implemented according to the official <a class="pml-link" href="../../docs/extensions/specification/index.html">PDML Extensions Specification</a>, and the documentation of a PDML implementation should clearly specify which extensions (if any) are supported.</p>
+                        <p class="pml-paragraph"><a class="pml-link" href="../../docs/extensions/user-manual/index.html">PDML Extensions</a> encompass additional rules that specify a set of predefined, but optional features (called extensions) designed to enrich the core functionality and increase practicality in specific contexts.  A PDML implementation can support some or all extensions, but every extension must be implemented according to the official <a class="pml-link" href="../../docs/extensions/specification/index.html">PDML Extensions Specification</a>, and the documentation of a PDML implementation should clearly specify which extensions (if any) are supported.</p>
                         <p class="pml-paragraph">Extensions are designed to simplify, and sometimes even automate the creation and maintenance of your PDML documents.</p>
 
                     </section>
-                    <section id="addon_examples" class="pml-chapter">
+                    <section id="addon-examples" class="pml-chapter">
                         <h2 class="pml-chapter-title">Can You Tell Me More About Extensions?</h2>
                         <p class="pml-paragraph">Here&apos;s a short overview of PDML extensions, including some simple examples:</p>
                         <ul class="pml-list">
                             <li class="pml-list-element">
                                 <div class="pml-header" role="heading">Comments</div>
-                                <p class="pml-paragraph">This extension enables you to insert single- or multi-line <a class="pml-link" href="../../docs/extensions/user_manual/index.html#comments">comments</a> in PDML documents. Multiline comments can be nested.</p>
+                                <p class="pml-paragraph">This extension enables you to insert single- or multi-line <a class="pml-link" href="../../docs/extensions/user-manual/index.html#comments">comments</a> in PDML documents. Multiline comments can be nested.</p>
                                 <p class="pml-paragraph">Example of a single-line comment:</p>
                                 <pre class="pml-code"><code>[config
     <b class="pml-bold">^// Valid values: small, medium, large</b>
@@ -212,16 +213,16 @@
                                 <p class="pml-paragraph">You can define constants containing reusable text, data, or markup snippets that can be inserted multiple times in a PDML document. This supports the <a class="pml-link" href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">&quot;Don&apos;t repeat yourself&quot;</a> (DRY) principle.</p>
                                 <p class="pml-paragraph">Consider the following PDML code:</p>
                                 <pre class="pml-code"><code>[URLs
-    [about_URL  https://www.example.com:8080/public/resources/docs/about.html]
-    [FAQ_URL    https://www.example.com:8080/public/resources/docs/faq.html]
-    [manual_URL https://www.example.com:8080/public/resources/docs/manual.html]
+    [about-URL  https://www.example.com:8080/public/resources/docs/about.html]
+    [FAQ-URL    https://www.example.com:8080/public/resources/docs/faq.html]
+    [manual-URL https://www.example.com:8080/public/resources/docs/manual.html]
 ]</code></pre>
-                                <p class="pml-paragraph">Instead of repeating the common URL part three times, you can increase maintainability and shorten the code by storing the common part into a constant named <code class="pml-inline-code">docs_URL</code>, and then insert the value stored in the constant as many times as needed:</p>
+                                <p class="pml-paragraph">Instead of repeating the common URL part three times, you can increase maintainability and shorten the code by storing the common part into a constant named <code class="pml-inline-code">docs-URL</code>, and then insert the value stored in the constant as many times as needed:</p>
                                 <pre class="pml-code"><code>[URLs
-    <b class="pml-bold">^[const docs_URL=&quot;https://www.example.com:8080/public/resources/docs/&quot;]</b>
-    [about_URL  <b class="pml-bold">^[ins docs_URL]</b>about.html]
-    [FAQ_URL    <b class="pml-bold">^[ins docs_URL]</b>faq.html]
-    [manual_URL <b class="pml-bold">^[ins docs_URL]</b>manual.html]
+    <b class="pml-bold">^[const docs-URL=&quot;https://www.example.com:8080/public/resources/docs/&quot;]</b>
+    [about-URL  <b class="pml-bold">^[ins-const docs-URL]</b>about.html]
+    [FAQ-URL    <b class="pml-bold">^[ins-const docs-URL]</b>faq.html]
+    [manual-URL <b class="pml-bold">^[ins-const docs-URL]</b>manual.html]
 ]</code></pre>
 
                             </li>
@@ -242,21 +243,21 @@
                                 <p class="pml-paragraph">Here&apos;s an example showing the chapters of a book stored in separate files:</p>
                                 <pre class="pml-code"><code>[book
     [title Strange Adventures of a Curious Software Developer]
-    <b class="pml-bold">^[ins_file chapters/chapter_1.pml]
-    ^[ins_file chapters/chapter_2.pml]
-    ^[ins_file chapters/chapter_3.pml]</b>
+    <b class="pml-bold">^[ins-file chapters/chapter_1.pml]
+    ^[ins-file chapters/chapter_2.pml]
+    ^[ins-file chapters/chapter_3.pml]</b>
     ...
 ]</code></pre>
 
                             </li>
                             <li class="pml-list-element">
                                 <div class="pml-header" role="heading">Unicode Escape Sequences</div>
-                                <p class="pml-paragraph">Insert <a class="pml-link" href="../../docs/extensions/user_manual/index.html#unicode_escape_sequences">Unicode escape sequences</a> (e.g. <code class="pml-inline-code">\u{1F600}</code> → 😀).</p>
+                                <p class="pml-paragraph">Insert <a class="pml-link" href="../../docs/extensions/user-manual/index.html#unicode-escape-sequences">Unicode escape sequences</a> (e.g. <code class="pml-inline-code">\u{1F600}</code> → 😀).</p>
 
                             </li>
                             <li class="pml-list-element">
                                 <div class="pml-header" role="heading">String Literals</div>
-                                <p class="pml-paragraph">Use quoted, multi-line, or raw <a class="pml-link" href="../../docs/extensions/user_manual/index.html#string_literals">string literals</a> to simplify the insertion of &quot;special text,&quot; such as source code, HTML snippets, regular expressions, etc.</p>
+                                <p class="pml-paragraph">Use quoted, multi-line, or raw <a class="pml-link" href="../../docs/extensions/user-manual/index.html#string-literals">string literals</a> to simplify the insertion of &quot;special text,&quot; such as source code, HTML snippets, regular expressions, etc.</p>
                                 <p class="pml-paragraph">For example, consider the following source code:</p>
                                 <pre class="pml-code"><code>repeat 3 times
     write_line ( &quot;[Hello]&quot; )
@@ -279,7 +280,7 @@
                             </li>
                             <li class="pml-list-element">
                                 <div class="pml-header" role="heading">Attributes</div>
-                                <p class="pml-paragraph">Use <a class="pml-link" href="../../docs/extensions/user_manual/index.html#attributes">attributes</a> to define meta-data (similar to attributes in XML/HTML).</p>
+                                <p class="pml-paragraph">Use <a class="pml-link" href="../../docs/extensions/user-manual/index.html#attributes">attributes</a> to define meta-data (similar to attributes in XML/HTML).</p>
                                 <p class="pml-paragraph">Pseudo-markup example:</p>
                                 <pre class="pml-code"><code>[header <b class="pml-bold">^(color=red size=big)</b> Important!]</code></pre>
 
@@ -311,7 +312,7 @@
 
                                 </ul>
                                 <p class="pml-paragraph">Here&apos;s a simple example of using a Java expression to define the text content of node <code class="pml-inline-code">OS_name</code>:</p>
-                                <pre class="pml-code"><code>[OS_name <b class="pml-bold">^[ins_exp System.getProperty(&quot;os.name&quot;)]</b>]</code></pre>
+                                <pre class="pml-code"><code>[OS_name <b class="pml-bold">^[ins-exp System.getProperty(&quot;os.name&quot;)]</b>]</code></pre>
 
                             </li>
                             <li class="pml-list-element">
@@ -332,7 +333,7 @@
                         </div>
 
                     </section>
-                    <section id="what_for" class="pml-chapter">
+                    <section id="what-for" class="pml-chapter">
                         <h2 class="pml-chapter-title">What Can I Do With PDML?</h2>
                         <p class="pml-paragraph">In a nutshell, you can:</p>
                         <ul class="pml-list">
@@ -355,7 +356,7 @@
 
                         </ul>
                         <p class="pml-paragraph">The following sub-sections provide more details. You might want to <a class="pml-xref" href="#comparison">skip</a> them and read them later if you wish.</p>
-                        <section id="data_storage" class="pml-chapter">
+                        <section id="data-storage" class="pml-chapter">
                             <h3 class="pml-chapter-title">Human-Friendly Data Storage and Delivery</h3>
                             <p class="pml-paragraph">You can use the PDML text format to edit data and/or markup (using any editor/IDE), save it into a portable, human-readable <code class="pml-inline-code">.pdml</code> file, store it in a local/remote database and transfer it over networks.</p>
                             <p class="pml-paragraph">PDML enables you to encode all kinds of data:</p>
@@ -381,12 +382,12 @@
                             <p class="pml-paragraph">You&apos;ll find examples of data and markup encoding in <a class="pml-link" href="../../docs/core/examples/index.html">Core PDML Examples</a>.</p>
 
                         </section>
-                        <section id="pdml_companion" class="pml-chapter">
+                        <section id="pdml-companion" class="pml-chapter">
                             <h3 class="pml-chapter-title">PDML Companion</h3>
                             <p class="pml-paragraph">You can immediately download the <a class="pml-link" href="../../downloads/index.html#pdmlc">PDML Companion</a> (a FOSS command line tool running on Linux, MacOS, and Windows) to:</p>
                             <ul class="pml-list">
                                 <li class="pml-list-element">
-                                    <p class="pml-paragraph">Convert a PDML document into a standalone HTML document (CSS included) to display an expandable/collapsible tree view of the PDML data/markup structure.</p>
+                                    <p class="pml-paragraph">Convert a PDML document into a standalone HTML document (CSS included) to display an expandable/collapsible tree view of the PDML data/markup structure. </p>
 
                                 </li>
                                 <li class="pml-list-element">
@@ -397,7 +398,7 @@
     [id 123]
     [quality <b class="pml-bold">\u{1F44D 1F44D}</b>]
 <b class="pml-bold">^// Use a Java expression to compute the price</b>
-    [price <b class="pml-bold">^[ins_exp 100 * 1.05]</b>]
+    [price <b class="pml-bold">^[ins-exp 100 * 1.05]</b>]
 ]</code></pre>
                                     <p class="pml-paragraph">To convert it to a document that depends only on Core PDML (and will therefore be compatible with any PDML implementation), you run the following command in a terminal:</p>
                                     <pre class="pml-input">pdml p2c input.pdml output.pdml</pre>
@@ -421,14 +422,14 @@
 
                                 </li>
                                 <li class="pml-list-element">
-                                    <p class="pml-paragraph">Call PDML Companion from scripts (e.g. <code class="pml-inline-code">.cmd</code>/<code class="pml-inline-code">.bat</code>/<code class="pml-inline-code">.ps1</code> or <code class="pml-inline-code">.sh</code> files) and automated builds to create customized one-click tasks/pipelines carrying out complex operations involving multiple tools.</p>
+                                    <p class="pml-paragraph">Call PDML Companion from scripts (e.g. <code class="pml-inline-code">.cmd</code>/<code class="pml-inline-code">.bat</code>/<code class="pml-inline-code">.ps1</code> or <code class="pml-inline-code">.sh</code> files) and automated builds to create customized one-click tasks/pipelines carrying out complex operations involving multiple tools. </p>
 
                                 </li>
 
                             </ul>
 
                         </section>
-                        <section id="java_library" class="pml-chapter">
+                        <section id="java-library" class="pml-chapter">
                             <h3 class="pml-chapter-title">Java Library</h3>
                             <p class="pml-paragraph">If you work on a JVM-based project (e.g. an application written in Java, Kotlin, Scala, Clojure, or any other language targeting the JVM), you can add the FOSS <a class="pml-link" href="https://github.com/practical-oss/pdml-full-impl">PDML reference implementation</a> (a <code class="pml-inline-code">.jar</code> file) as a dependency to your project, and then use all the functionality available:</p>
                             <ul class="pml-list">
@@ -484,7 +485,7 @@
                             </div>
 
                         </section>
-                        <section id="create_your_own" class="pml-chapter">
+                        <section id="create-your-own" class="pml-chapter">
                             <h3 class="pml-chapter-title">Create Your Own Implementation</h3>
                             <p class="pml-paragraph">You can also read the <a class="pml-link" href="../../docs/core/specification/index.html">Core PDML Specification</a> and write your own PDML parser in your preferred language, and (if you wish) implement PDML extensions.</p>
 
@@ -512,7 +513,7 @@
 
                             </li>
                             <li class="pml-list-element">
-                                <p class="pml-paragraph">PDML provides the aforementioned unique set of <a class="pml-xref" href="#addon_examples">standardized extensions</a>. JSON and XML also support Unicode escape sequences, but JSON requires <a class="pml-link" href="https://stackoverflow.com/questions/38463038/why-does-json-encode-utf-16-surrogate-pairs-instead-of-unicode-code-points-direc">surrogate pairs</a> for Unicode code points greater than <code class="pml-inline-code">U+FFFF</code>. Some PDML extensions (e.g. comments and attributes) are also supported in XML, but in different ways.</p>
+                                <p class="pml-paragraph">PDML provides the aforementioned unique set of <a class="pml-xref" href="#addon-examples">standardized extensions</a>. JSON and XML also support Unicode escape sequences, but JSON requires <a class="pml-link" href="https://stackoverflow.com/questions/38463038/why-does-json-encode-utf-16-surrogate-pairs-instead-of-unicode-code-points-direc">surrogate pairs</a> for Unicode code points greater than <code class="pml-inline-code">U+FFFF</code>. Some PDML extensions (e.g. comments and attributes) are also supported in XML, but in different ways.</p>
 
                             </li>
 
@@ -524,7 +525,7 @@
                             </div>
                             <div class="pml-admonition-content">
                                 <p class="pml-paragraph">The above claims (excluding extensions) are explained and exemplified in <a class="pml-link" href="../../docs/articles/suggestion-for-better-xml-html/index.html">&quot;Suggestion For a Better XML/HTML Syntax&quot;</a>.</p>
-                                <p class="pml-paragraph">The <a class="pml-link" href="../../index.html">PDML homepage</a> presents a simple example comparing the XML, JSON, and PDML syntaxes. You can find more examples in <a class="pml-link" href="../../docs/core/examples/index.html">Core PDML Examples</a>.</p>
+                                <p class="pml-paragraph">The <a class="pml-link" href="../../index.html">PDML homepage</a> presents a simple example comparing the XML, JSON, and PDML syntaxes.  You can find more examples in <a class="pml-link" href="../../docs/core/examples/index.html">Core PDML Examples</a>.</p>
                             </div>
                         </div>
 
@@ -619,8 +620,7 @@
                     </section>
                     <section id="origins" class="pml-chapter">
                         <h2 class="pml-chapter-title">What Are the Origins of PDML?</h2>
-                        <p class="pml-paragraph">PDML originated along with the <a class="pml-link" href="https://pml-lang.dev/index.html">Practical Markup Language</a> (PML), a lightweight markup specification and FOSS command line tool for writing styled text documents, rendered as HTML.</p>
-                        <p class="pml-paragraph">Here&apos;s a condensed version of the timeline:</p>
+                        <p class="pml-paragraph">PDML originated along with the <a class="pml-link" href="https://pml-lang.dev/index.html">Practical Markup Language</a> (PML), a lightweight markup specification and FOSS command line tool for writing styled text documents, rendered as HTML.  Here&apos;s a condensed version of the timeline:</p>
                         <ul class="pml-list">
                             <li class="pml-list-element">
                                 <p class="pml-paragraph">2018: creation of the PDML syntax (initially called PML syntax).</p>

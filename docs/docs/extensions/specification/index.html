@@ -29,9 +29,9 @@
                                                 <details>
                                                     <summary><a href="#comments">Comments</a></summary>
                                                     <ul>
-                                                        <li class="pml-toc-leaf-node"><a href="#comments_single_line">Single-line Comment</a></li>
-                                                        <li class="pml-toc-leaf-node"><a href="#comments_multi_line">Multi-line Comment</a></li>
-                                                        <li class="pml-toc-leaf-node"><a href="#comments_rules">Common Rules</a></li>
+                                                        <li class="pml-toc-leaf-node"><a href="#comments-single-line">Line Comment</a></li>
+                                                        <li class="pml-toc-leaf-node"><a href="#comments-block">Block Comment</a></li>
+                                                        <li class="pml-toc-leaf-node"><a href="#comments-rules">Common Rules</a></li>
                                                     </ul>
                                                 </details>
                                             </li>
@@ -39,17 +39,17 @@
                                                 <details>
                                                     <summary><a href="#ues">Unicode Escape Sequences</a></summary>
                                                     <ul>
-                                                        <li class="pml-toc-leaf-node"><a href="#ues_grammar">Grammar</a></li>
-                                                        <li class="pml-toc-leaf-node"><a href="#ues_rules">Additional Rules</a></li>
+                                                        <li class="pml-toc-leaf-node"><a href="#ues-grammar">Grammar</a></li>
+                                                        <li class="pml-toc-leaf-node"><a href="#ues-rules">Additional Rules</a></li>
                                                     </ul>
                                                 </details>
                                             </li>
-                                            <li class="pml-toc-leaf-node"><a href="#string_literals">String Literals</a></li>
+                                            <li class="pml-toc-leaf-node"><a href="#string-literals">String Literals</a></li>
                                             <li class="pml-toc-leaf-node"><a href="#attributes">Attributes</a></li>
                                         </ul>
                                     </details>
                                 </li>
-                                <li class="pml-toc-leaf-node"><a href="#utility_nodes">Utility Nodes</a></li>
+                                <li class="pml-toc-leaf-node"><a href="#utility-nodes">Utility Nodes</a></li>
                                 <li class="pml-toc-leaf-node"><a href="#scripting">Scripting Nodes</a></li>
                                 <li class="pml-toc-leaf-node"><a href="#types">Types</a></li>
                             </ul>
@@ -66,7 +66,7 @@
 
                                 </td>
                                 <td class="pml-table-body-cell">
-                                    <p class="pml-paragraph">0.80.0</p>
+                                    <p class="pml-paragraph">0.81.0</p>
 
                                 </td>
 
@@ -108,11 +108,12 @@
                         </table>
 
                     </div>
+                    <p class="pml-paragraph">   </p>
                     <section id="introduction" class="pml-chapter">
                         <h2 class="pml-chapter-title">Introduction</h2>
                         <p class="pml-paragraph">The Practical Data and Markup Language (PDML) is a text format designed for encoding data and markup (i.e. formatted text).</p>
                         <p class="pml-paragraph">This document provides the authoritative specification for PDML Extensions. Core PDML is covered in <a class="pml-link" href="../../core/specification/index.html">Core PDML Specification</a>. The difference between Core PDML and PDML Extensions is explained in <a class="pml-link" href="../../overview/index.html#core_addon">What Is &quot;Core PDML&quot; and What Are &quot;PDML Extensions&quot;?</a>.</p>
-                        <p class="pml-paragraph">The specification is written for anyone who wants to know the exact rules governing PDML Extensions (e.g. software developers who want to implement a PDML parser, an editor/IDE plugin, or other PDML assets). If you are new to PDML Extensions, it is recommended to first read <a class="pml-link" href="../../extensions/user_manual/index.html">PDML Extensions User Manual</a>. For general information about PDML you may read <a class="pml-link" href="../../overview/index.html">PDML Overview</a>.</p>
+                        <p class="pml-paragraph">The specification is written for anyone who wants to know the exact rules governing PDML Extensions (e.g. software developers who want to implement a PDML parser, an editor/IDE plugin, or other PDML assets). If you are new to PDML Extensions, it is recommended to first read <a class="pml-link" href="../../extensions/user-manual/index.html">PDML Extensions User Manual</a>. For general information about PDML you may read <a class="pml-link" href="../../overview/index.html">PDML Overview</a>.</p>
                         <div class="pml-admonition">
                             <div class="pml-admonition-label">
                                 <p class="pml-paragraph">Notes</p>
@@ -141,7 +142,7 @@
                     <section id="caret" class="pml-chapter">
                         <h2 class="pml-chapter-title">The Extension Start Character <code class="pml-inline-code">^</code></h2>
                         <p class="pml-paragraph">Every extension (except <a class="pml-xref" href="#ues">Unicode Escape Sequences</a>) starts with a Circumflex Accent (<code class="pml-inline-code">^</code>, U+005E), also known as the <b class="pml-bold">extension start character</b> in the context of PDML.</p>
-                        <p class="pml-paragraph">This character is always followed by one or more characters that identify the extension to be applied. For example, <code class="pml-inline-code">^/</code> indicates the start of a <a class="pml-xref" href="#comments">comment</a>, while <code class="pml-inline-code">^&quot;</code> indicates the start of a <a class="pml-xref" href="#string_literals">string literal</a>. </p>
+                        <p class="pml-paragraph">This character is always followed by one or more characters that identify the extension to be applied. For example, <code class="pml-inline-code">^/</code> indicates the start of a <a class="pml-xref" href="#comments">comment</a>, while <code class="pml-inline-code">^&quot;</code> indicates the start of a <a class="pml-xref" href="#string-literals">string literal</a>. </p>
 
                     </section>
                     <section id="ch__3" class="pml-chapter">
@@ -157,7 +158,7 @@
 
                             </li>
                             <li class="pml-list-element">
-                                <p class="pml-paragraph"><a class="pml-xref" href="#string_literals">String Literals</a></p>
+                                <p class="pml-paragraph"><a class="pml-xref" href="#string-literals">String Literals</a></p>
 
                             </li>
                             <li class="pml-list-element">
@@ -168,22 +169,27 @@
                         </ul>
                         <section id="comments" class="pml-chapter">
                             <h3 class="pml-chapter-title">Comments</h3>
-                            <p class="pml-paragraph">A comment consists of a text segment that is not part of the data/markup code stored in a PDML document. PDML supports single-line comments and nested multi-line comments.</p>
-                            <section id="comments_single_line" class="pml-chapter">
-                                <h4 class="pml-chapter-title">Single-line Comment</h4>
-                                <p class="pml-paragraph">A single-line comment starts with <code class="pml-inline-code">^//</code> or <code class="pml-inline-code">^/</code> at any position in a line. It ends at the end of line:</p>
+                            <p class="pml-paragraph">A comment consists of a text segment that is not part of the data/markup code stored in a PDML document. PDML supports line comments and nested block comments.</p>
+                            <section id="comments-single-line" class="pml-chapter">
+                                <h4 class="pml-chapter-title">Line Comment</h4>
+                                <p class="pml-paragraph">A line comment starts with <code class="pml-inline-code">^//</code> at any position in a line, and ends at the end of line:</p>
                                 <pre class="pml-code"><code>^// Full line comment
 text ^// Trailing comment</code></pre>
-                                <p class="pml-paragraph">If the comment starts with <code class="pml-inline-code">^//</code> then the line break at the end of line (LF or CRLF) is included in the comment, otherwise it is not included:</p>
-                                <pre class="pml-code"><code>^// Line break is part of the comment
-^/  Line break is part of the following text
-text text</code></pre>
+                                <p class="pml-paragraph">The line break at the end of the line (LF or CRLF) is not part of the comment — it is part of the document. Consider the following node:</p>
+                                <pre class="pml-code"><code>[node
+line 1
+^// comment
+line 2]</code></pre>
+                                <p class="pml-paragraph">Because the line break at the end of the comment is part of the document, the text stored in <code class="pml-inline-code">node</code> is:</p>
+                                <pre class="pml-code"><code>line 1
+
+line 2</code></pre>
 
                             </section>
-                            <section id="comments_multi_line" class="pml-chapter">
-                                <h4 class="pml-chapter-title">Multi-line Comment</h4>
-                                <p class="pml-paragraph">A multi-line comment starts with <code class="pml-inline-code">^/</code>, immediately followed by one or more <code class="pml-inline-code">*</code> characters (e.g. <code class="pml-inline-code">^/*</code>, <code class="pml-inline-code">^/**</code>, <code class="pml-inline-code">^/***</code>). It must be ended by the same number of <code class="pml-inline-code">*</code> characters that were used to start the comment, followed by a <code class="pml-inline-code">/</code> character (e.g. <code class="pml-inline-code">*/</code>, <code class="pml-inline-code">**/</code>, <code class="pml-inline-code">***/</code>).</p>
-                                <p class="pml-paragraph">It can start at any position in a line. It can end in the same line as it was started, or at a subsequent line, at any position:</p>
+                            <section id="comments-block" class="pml-chapter">
+                                <h4 class="pml-chapter-title">Block Comment</h4>
+                                <p class="pml-paragraph">A block comment starts with <code class="pml-inline-code">^/</code>, immediately followed by one or more <code class="pml-inline-code">*</code> characters (e.g. <code class="pml-inline-code">^/*</code>, <code class="pml-inline-code">^/**</code>, <code class="pml-inline-code">^/***</code>). It must be ended by the same number of <code class="pml-inline-code">*</code> characters that were used to start the comment, followed by a <code class="pml-inline-code">/</code> character (e.g. <code class="pml-inline-code">*/</code>, <code class="pml-inline-code">**/</code>, <code class="pml-inline-code">***/</code>).</p>
+                                <p class="pml-paragraph">A block comment can start at any position in a line. It can end in the same line as it was started, or at a subsequent line, at any position:</p>
                                 <pre class="pml-code"><code>^/*
     multi
     line
@@ -194,7 +200,7 @@ text ^/* inline comment */ text
 
 text ^/* this text is
 commented out */ text </code></pre>
-                                <p class="pml-paragraph">Multi-line comments can be nested to any level:</p>
+                                <p class="pml-paragraph">Block comments may be nested to any level:</p>
                                 <pre class="pml-code"><code>^/* level 1 (not nested)
     ^/* level 2
         ^/* level 3 */
@@ -202,16 +208,16 @@ commented out */ text </code></pre>
 */</code></pre>
 
                             </section>
-                            <section id="comments_rules" class="pml-chapter">
+                            <section id="comments-rules" class="pml-chapter">
                                 <h4 class="pml-chapter-title">Common Rules</h4>
-                                <p class="pml-paragraph">Single- and multi-line comments must adhere to the following rules:</p>
+                                <p class="pml-paragraph">Line and block comments must adhere to the following rules:</p>
                                 <p class="pml-paragraph">Comments are allowed:</p>
                                 <ul class="pml-list">
                                     <li class="pml-list-element">
                                         <p class="pml-paragraph">At the start, in the middle, and at the end of text leaves:</p>
                                         <pre class="pml-code"><code>[foo <b class="pml-bold">^/* comment at start */</b> text]
 
-[foo text <b class="pml-bold">^/* comment */</b> text <b class="pml-bold">^/* comment */</b> text]
+[foo text <b class="pml-bold">^/* comment in the middle */</b> text]
 
 [foo text <b class="pml-bold">^/* comment at end */</b>]
 
@@ -260,7 +266,7 @@ commented out */ text </code></pre>
 
                                     </div>
                                     <div class="pml-admonition-content">
-                                        <p class="pml-paragraph">Comments are usually skipped (ignored) by parsers. However, sometimes they must be handled in one way or another. For example, a parser that creates a concrete syntax tree (CST) stores all comments in the CST.</p>
+                                        <p class="pml-paragraph">Comments are usually skipped (ignored) by parsers, and not stored in the AST created by the parser. However, parsers that create a concrete syntax tree (CST) must retain comments and store them in the CST.</p>
                                     </div>
                                 </div>
 
@@ -270,8 +276,8 @@ commented out */ text </code></pre>
                         <section id="ues" class="pml-chapter">
                             <h3 class="pml-chapter-title">Unicode Escape Sequences</h3>
                             <p class="pml-paragraph">Unicode escape sequences enable users and machines to insert <a class="pml-link" href="https://en.wikipedia.org/wiki/List_of_Unicode_characters">Unicode code points</a> in PDML documents by specifying the hexadecimal values of the code points.</p>
-                            <p class="pml-paragraph">For an introduction and examples you may first read section <a class="pml-link" href="../../extensions/user_manual/index.html#ues">Unicode Escape Sequences</a> in the PDML Extensions User Manual.</p>
-                            <section id="ues_grammar" class="pml-chapter">
+                            <p class="pml-paragraph">For an introduction and examples you may first read section <a class="pml-link" href="../../extensions/user-manual/index.html#ues">Unicode Escape Sequences</a> in the PDML Extensions User Manual.</p>
+                            <section id="ues-grammar" class="pml-chapter">
                                 <h4 class="pml-chapter-title">Grammar</h4>
                                 <p class="pml-paragraph">PDML adopts the <code class="pml-inline-code">\u{hhhhhh}</code> syntax for Unicode escape sequences, but allows a list of several code points to be defined in a single escape sequence.</p>
                                 <p class="pml-paragraph">The grammar is defined as follows:</p>
@@ -386,7 +392,7 @@ commented out */ text </code></pre>
                                 </table>
 
                             </section>
-                            <section id="ues_rules" class="pml-chapter">
+                            <section id="ues-rules" class="pml-chapter">
                                 <h4 class="pml-chapter-title">Additional Rules</h4>
                                 <p class="pml-paragraph">In addition to the rules defined by the grammar, the following rules apply:</p>
                                 <ul class="pml-list">
@@ -458,7 +464,7 @@ foo\u{41}bar
                             </section>
 
                         </section>
-                        <section id="string_literals" class="pml-chapter">
+                        <section id="string-literals" class="pml-chapter">
                             <h3 class="pml-chapter-title">String Literals</h3>
                             <div class="pml-admonition">
                                 <div class="pml-admonition-label">
@@ -486,7 +492,7 @@ foo\u{41}bar
                         </section>
 
                     </section>
-                    <section id="utility_nodes" class="pml-chapter">
+                    <section id="utility-nodes" class="pml-chapter">
                         <h2 class="pml-chapter-title">Utility Nodes</h2>
                         <div class="pml-admonition">
                             <div class="pml-admonition-label">

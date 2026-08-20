@@ -32,9 +32,9 @@
                 [caption File Dockerfile]
                 [code
                     """
-                    FROM openjdk:17-alpine
+                    FROM openjdk:21-alpine
 
-                    ARG PDML_VERSION=0.80.0
+                    ARG PDML_VERSION=0.81.0
 
                     WORKDIR /app
 
