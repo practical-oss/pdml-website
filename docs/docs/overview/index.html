@@ -56,7 +56,7 @@
 
                             </td>
                             <td class="pml-table-body-cell">
-                                <p class="pml-paragraph">2025-03-25</p>
+                                <p class="pml-paragraph">2026-08-19</p>
 
                             </td>
 
@@ -199,8 +199,8 @@
                         <ul class="pml-list">
                             <li class="pml-list-element">
                                 <div class="pml-header" role="heading">Comments</div>
-                                <p class="pml-paragraph">This extension enables you to insert single- or multi-line <a class="pml-link" href="../../docs/extensions/user-manual/index.html#comments">comments</a> in PDML documents. Multiline comments can be nested.</p>
-                                <p class="pml-paragraph">Example of a single-line comment:</p>
+                                <p class="pml-paragraph">This extension enables you to insert line- or block- <a class="pml-link" href="../../docs/extensions/user-manual/index.html#comments">comments</a> in PDML documents. Block comments can be nested.</p>
+                                <p class="pml-paragraph">Example of a line comment:</p>
                                 <pre class="pml-code"><code>[config
     <b class="pml-bold">^// Valid values: small, medium, large</b>
     [size large]
@@ -219,7 +219,7 @@
 ]</code></pre>
                                 <p class="pml-paragraph">Instead of repeating the common URL part three times, you can increase maintainability and shorten the code by storing the common part into a constant named <code class="pml-inline-code">docs-URL</code>, and then insert the value stored in the constant as many times as needed:</p>
                                 <pre class="pml-code"><code>[URLs
-    <b class="pml-bold">^[const docs-URL=&quot;https://www.example.com:8080/public/resources/docs/&quot;]</b>
+    <b class="pml-bold">^[const [docs-URL https://www.example.com:8080/public/resources/docs/]]</b>
     [about-URL  <b class="pml-bold">^[ins-const docs-URL]</b>about.html]
     [FAQ-URL    <b class="pml-bold">^[ins-const docs-URL]</b>faq.html]
     [manual-URL <b class="pml-bold">^[ins-const docs-URL]</b>manual.html]
@@ -312,7 +312,7 @@
 
                                 </ul>
                                 <p class="pml-paragraph">Here&apos;s a simple example of using a Java expression to define the text content of node <code class="pml-inline-code">OS_name</code>:</p>
-                                <pre class="pml-code"><code>[OS_name <b class="pml-bold">^[ins-exp System.getProperty(&quot;os.name&quot;)]</b>]</code></pre>
+                                <pre class="pml-code"><code>[OS_name <b class="pml-bold">^[ins-exp ~System.getProperty(&quot;os.name&quot;)~]</b>]</code></pre>
 
                             </li>
                             <li class="pml-list-element">
@@ -398,7 +398,7 @@
     [id 123]
     [quality <b class="pml-bold">\u{1F44D 1F44D}</b>]
 <b class="pml-bold">^// Use a Java expression to compute the price</b>
-    [price <b class="pml-bold">^[ins-exp 100 * 1.05]</b>]
+    [price <b class="pml-bold">^[ins-exp 100*1.05]</b>]
 ]</code></pre>
                                     <p class="pml-paragraph">To convert it to a document that depends only on Core PDML (and will therefore be compatible with any PDML implementation), you run the following command in a terminal:</p>
                                     <pre class="pml-input">pdml p2c input.pdml output.pdml</pre>
